@@ -53,8 +53,11 @@ function Body() {
 
 function Card() {
   return (
-    <div className='card'>
-    <p>Titre de la location</p>
+    <div>
+      <Link to="/Logement" />
+      <div className='card'>
+        <p>Titre de la location</p>
+      </div>
     </div>
   )
 }

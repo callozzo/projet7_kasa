@@ -1,0 +1,28 @@
+.bodyApropos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 298px;
+  margin: 0 208.5px 38px 208.5px;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 0 20px 0 15px;
+  background-color: #FF6060;
+}
+.categories h1 {
+  color: white;
+  font-size: 24px;
+}
+.categories .deroule {
+  color: white;
+  font-size: 24px;
+  transition: rotate 0.4s linear 1 forwards;
+}
+.categories .rotate {
+  transform: rotate(0.5turn);
+}/*# sourceMappingURL=bodyApropos.css.map */

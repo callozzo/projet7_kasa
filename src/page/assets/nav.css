@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px 43px 100px;
+  border-radius: 25px;
+  height: 223px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./ImageHome.png);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(60%);
+}
+.nav h1 {
+  color: #FFFFFF;
+}/*# sourceMappingURL=nav.css.map */

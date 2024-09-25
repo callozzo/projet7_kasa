@@ -1,6 +1,8 @@
 import { Header, Footer }from './home';
 import './assets/index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
 
 function Apropos() {
     return (
@@ -22,7 +24,7 @@ function Nav() {
 
 function Body() {
     return (
-        <div className='categories'>
+        <div className='bodyApropos'>
             <Fiabilité />
             <Respect />
             <Service />
@@ -33,38 +35,51 @@ function Body() {
 
 function Fiabilité() {
     return (
-        <div>
+        <div className='categories'>
             <h1>Fiabilité</h1>
-            <FontAwesomeIcon icon="fa-solid fa-chevron-up" />
+            <ChevronUp />
         </div>
     )
 }
 
 function Respect() {
     return (
-        <div>
+        <div className='categories'>
             <h1>Respect</h1>
-            <FontAwesomeIcon icon="fa-solid fa-chevron-up" />
+            <ChevronUp />
         </div>
     )
 }
 
 function Service() {
     return (
-        <div>
+        <div className='categories'>
             <h1>Service</h1>
-            <FontAwesomeIcon icon="fa-solid fa-chevron-up" />
+            <ChevronUp />
         </div>
     )
 }
 
 function Sécurité() {
     return (
-        <div>
+        <div className='categories'>
             <h1>Sécurité</h1>
-            <FontAwesomeIcon icon="fa-solid fa-chevron-up" />
+            <ChevronUp />
         </div>
     )
+}
+
+function ChevronUp() {
+
+    const [rotate, setRotate] = useState(false);
+
+    const handleClick = () => {
+        setRotate(!rotate);
+    };
+
+    return (
+        <FontAwesomeIcon icon={faChevronUp} className={`deroule ${rotate ? 'rotate' : ''}`} onclick = {handleClick} />
+    );
 }
 
 export default Apropos;

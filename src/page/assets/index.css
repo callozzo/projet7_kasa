@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 45px 100px 50px 100px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}
+.link a {
+  color: black;
+  text-decoration: none;
+}
+
+.espacement {
+  margin-right: 57px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px 43px 100px;
+  border-radius: 25px;
+  height: 223px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./ImageHome.png);
+  background-position: center;
+  background-size: cover;
+  filter: brightness(60%);
+}
+.nav h1 {
+  color: #FFFFFF;
+}
+
+.background {
+  height: 223px;
+  margin: 0 100px 38px 100px;
+  border-radius: 25px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./ImageApropos.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 829px;
+  margin: 0 100px 50px 100px;
+  padding: 56px 50px 0 50px;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-end;
+  height: 340px;
+  width: 340px;
+  background: linear-gradient(180deg, rgba(185, 2, 2, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+  background-color: #FF6060;
+  border-radius: 10px;
+}
+.card p {
+  color: white;
+}
+
+.bodyApropos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 298px;
+  margin: 0 208.5px 38px 208.5px;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 0 20px 0 15px;
+  background-color: #FF6060;
+}
+.categories h1 {
+  color: white;
+  font-size: 24px;
+}
+.categories .deroule {
+  color: white;
+  font-size: 24px;
+}
+.categories .rotate {
+  animation: rotate 0.4s linear 1 forwards;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 209px;
+  background-color: black;
+}
+.footer p {
+  color: white;
+}/*# sourceMappingURL=index.css.map */
