@@ -78,7 +78,7 @@ function ChevronUp() {
     };
 
     return (
-        <FontAwesomeIcon icon={faChevronUp} className={`deroule ${rotate ? 'rotate' : ''}`} onclick = {handleClick} />
+        <FontAwesomeIcon icon={faChevronUp} className={`deroule ${rotate ? 'rotate' : ''}`} onClick = {handleClick} />
     );
 }
 
