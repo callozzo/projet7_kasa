@@ -13,7 +13,11 @@ function Logement() {
 }
 
 function carroussel() {
-
+    return (
+        <div>
+            
+        </div>
+    )
 }
 
 export default Logement;

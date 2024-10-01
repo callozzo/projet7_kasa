@@ -34,51 +34,100 @@ function Body() {
 }
 
 function Fiabilité() {
-    return (
-        <div className='categories'>
-            <h1>Fiabilité</h1>
-            <ChevronUp />
-        </div>
-    )
-}
+    const [collapse, setCollapse] = useState(false);
 
-function Respect() {
-    return (
-        <div className='categories'>
-            <h1>Respect</h1>
-            <ChevronUp />
-        </div>
-    )
-}
-
-function Service() {
-    return (
-        <div className='categories'>
-            <h1>Service</h1>
-            <ChevronUp />
-        </div>
-    )
-}
-
-function Sécurité() {
-    return (
-        <div className='categories'>
-            <h1>Sécurité</h1>
-            <ChevronUp />
-        </div>
-    )
-}
-
-function ChevronUp() {
-
-    const [rotate, setRotate] = useState(false);
-
-    const handleClick = () => {
-        setRotate(!rotate);
+    const handleCollapse = () => {
+        setCollapse(!collapse); 
     };
 
     return (
-        <FontAwesomeIcon icon={faChevronUp} className={`deroule ${rotate ? 'rotate' : ''}`} onClick = {handleClick} />
+        <div>
+            <div className='categories'>
+                <h1>Fiabilité</h1>
+                <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
+            </div>
+            <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
+                <p>
+                    Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
+                </p> 
+            </div>
+        </div>
+    );
+}
+
+function Respect() {
+    const [collapse, setCollapse] = useState(false);
+
+    const handleCollapse = () => {
+        setCollapse(!collapse); 
+    };
+
+    return (
+        <div>
+            <div className='categories'>
+                <h1>Respect</h1>
+                <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
+            </div>
+            <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
+                <p>
+                    La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de pertubation du voisinage entrainera une exclusion de notre plateforme.
+                </p> 
+            </div>
+        </div>
+    );
+}
+
+function Service() {
+    const [collapse, setCollapse] = useState(false);
+
+    const handleCollapse = () => {
+        setCollapse(!collapse); 
+    };
+
+    return (
+        <div>
+            <div className='categories'>
+                <h1>Service</h1>
+                <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
+            </div>
+            <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
+                <p>
+                    La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons à ce que chaque interaction, que ce soit avec nos hôtes ou nos locataires, soit empreinte de respect et de bienveillance.
+                </p>
+            </div>
+        </div>
+    );
+}
+
+function Sécurité() {
+    const [collapse, setCollapse] = useState(false);
+
+    const handleCollapse = () => {
+        setCollapse(!collapse); 
+    };
+
+    return (
+        <div>
+            <div className='categories'>
+                <h1>Sécurité</h1>
+                <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
+            </div>
+            <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
+                <p>
+                    La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.
+                </p>
+            </div>
+        </div>
+    );
+}
+
+function ChevronUp({ collapse, handleCollapse }) {
+    return (
+        <FontAwesomeIcon 
+            icon={faChevronUp} 
+            className={`deroule ${collapse ? 'rotate' : ''}`}  // Ajoute la classe rotate seulement quand collapse est true
+            onClick={handleCollapse} 
+        />
     );
 }
 

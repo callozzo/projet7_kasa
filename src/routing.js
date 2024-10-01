@@ -1,5 +1,6 @@
 import Home from './page/home';
 import Apropos from './page/apropos'
+import Erreur from './page/erreur404'
 import Logement from './page/logement'
 import { createBrowserRouter } from "react-router-dom";
   
@@ -11,6 +12,10 @@ import { createBrowserRouter } from "react-router-dom";
     {
       path: "/apropos",
       element: <Apropos />
+    },
+    {
+      path: "/404",
+      element: <Erreur />
     },
     {
       path: "/logement",
