@@ -14,11 +14,11 @@ import { createBrowserRouter } from "react-router-dom";
       element: <Apropos />
     },
     {
-      path: "/404",
+      path: "*",
       element: <Erreur />
     },
     {
-      path: "/logement",
+      path: "/logement/:id",
       element: <Logement />
     }
   ]);

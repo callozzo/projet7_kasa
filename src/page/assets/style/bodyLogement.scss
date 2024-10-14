@@ -1,0 +1,34 @@
+.carrousel {
+    display: flex;
+    align-items: center;
+    margin: 0 100px 0 100px;
+    height: 415px;
+
+    svg {
+        font-size: 46px;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+
+   .faLeft {
+    position: absolute; left: 120px;
+   }
+
+   .faRight {
+    position: absolute; right: 120px;
+   }
+
+   p {
+    position: absolute; left: 720px;bottom: 380px;
+   }
+}
+
+.dot {
+    display: flex;
+    justify-content: center;
+}

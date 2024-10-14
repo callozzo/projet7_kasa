@@ -1,5 +1,6 @@
 import { Header, Footer } from './home';
 import { Link } from 'react-router-dom';
+import './assets/style/index.scss';
 
 function Erreur() {
     return (

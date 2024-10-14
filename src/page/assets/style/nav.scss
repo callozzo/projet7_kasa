@@ -1,11 +1,11 @@
-.nav {
+.banner {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 100px 43px 100px;
     border-radius: 25px;
     height: 223px;
-    background-image: linear-gradient(rgba(0,0,0,0.400),rgba(0,0,0,0.400)) , url(./ImageHome.png);
+    background-image: linear-gradient(rgba(0,0,0,0.400),rgba(0,0,0,0.400)) , url(../images/ImageHome.png);
     background-position: center;
     background-size: cover;
     filter: brightness(60%);

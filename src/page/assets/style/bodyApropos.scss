@@ -1,9 +1,13 @@
 .bodyApropos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 30px;
     margin: 0 208.5px 38px 208.5px;
+
+    .categoriesBox {
+        display: flex;
+        flex-direction: column;
+    }
 
     .categories {
         position: relative;

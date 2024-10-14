@@ -1,5 +1,5 @@
 import { Header, Footer }from './home';
-import './assets/index.scss';
+import './assets/style/index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
@@ -8,14 +8,14 @@ function Apropos() {
     return (
         <div>
             <Header />
-            <Nav />
+            <BannerApropos />
             <Body />
             <Footer />
         </div>
     )
 }
 
-function Nav() {
+function BannerApropos() {
     return (
         <div className='background'>
         </div>
@@ -41,7 +41,7 @@ function Fiabilité() {
     };
 
     return (
-        <div>
+        <div className='categoriesBox'>
             <div className='categories'>
                 <h1>Fiabilité</h1>
                 <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
@@ -63,7 +63,7 @@ function Respect() {
     };
 
     return (
-        <div>
+        <div className='categoriesBox'>
             <div className='categories'>
                 <h1>Respect</h1>
                 <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
@@ -85,7 +85,7 @@ function Service() {
     };
 
     return (
-        <div>
+        <div className='categoriesBox'>
             <div className='categories'>
                 <h1>Service</h1>
                 <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
@@ -107,7 +107,7 @@ function Sécurité() {
     };
 
     return (
-        <div>
+        <div className='categoriesBox'>
             <div className='categories'>
                 <h1>Sécurité</h1>
                 <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />

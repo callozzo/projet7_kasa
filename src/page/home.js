@@ -1,13 +1,14 @@
-import logoRouge from './assets/.LOGO.svg';
-import logoBlanc from './assets/.LOGOBlanc.svg';
-import './assets/index.scss';
+import logoRouge from './assets/images/.LOGO.svg';
+import logoBlanc from './assets/images/.LOGOBlanc.svg';
+import './assets/style/index.scss';
 import { Link } from 'react-router-dom';
+import logement from './assets/logement.json';
 
 function Home() {
   return(
     <div>
       <Header />
-      <Nav />
+      <Banner />
       <Body />
       <Footer />
     </div>
@@ -30,37 +31,38 @@ function Header() {
 
 
 
-function Nav() {
+function Banner() {
   return (
-    <div className='nav'>
+    <div className='banner'>
       <h1>Chez vous, partout et ailleurs</h1>
     </div>
   )
 }
 
+
+
 function Body() {
-  return(
+  return (
     <div className='body'>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {logement.map((logement, index) => (
+        <Card key={index} logement={logement} />
+      ))}
     </div>
-  )
+  );
 }
 
-function Card() {
+function Card({ logement }) {
   return (
-    <div>
-      <Link to="/Logement" />
+    <Link to={`/Logement/${logement.id}`}>
       <div className='card'>
-        <p>Titre de la location</p>
+        <img src={logement.cover} alt={logement.title} />
+        <p>{logement.title}</p>
       </div>
-    </div>
-  )
+    </Link>
+  );
 }
+
+
 
 function Footer() {
   return (

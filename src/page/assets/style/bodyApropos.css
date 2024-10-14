@@ -1,0 +1,63 @@
+.bodyApropos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 208.5px 38px 208.5px;
+}
+.bodyApropos .categoriesBox {
+  display: flex;
+  flex-direction: column;
+}
+.bodyApropos .categories {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 0 20px 0 15px;
+  background-color: #FF6060;
+}
+.bodyApropos .categories h1 {
+  color: white;
+  font-size: 24px;
+}
+.bodyApropos .categories .deroule {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+.bodyApropos .categories .rotate {
+  transform: rotate(-180deg);
+  transition: transform 0.4s ease;
+}
+.bodyApropos .collapseContent {
+  z-index: 0;
+  position: relative;
+  bottom: 60px;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(0);
+  overflow: hidden;
+  background-color: rgba(246, 246, 246, 0.4509803922);
+}
+.bodyApropos .slide {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(80%);
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=bodyApropos.css.map */

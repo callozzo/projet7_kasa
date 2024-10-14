@@ -1,0 +1,13 @@
+.centrer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.redColor {
+  color: #ff6060;
+}
+
+.blackColor {
+  color: black;
+}/*# sourceMappingURL=erreur404.css.map */
