@@ -1,8 +1,11 @@
 import { Header, Footer } from './home';
+import { ChevronUp } from './apropos';
 import { useParams } from 'react-router-dom';
 import './assets/style/index.scss';
 import Chevrongauche from './assets/images/ChevronGauche.svg';
 import Chevronright from './assets/images/ChevronDroite.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar  } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import logementData from './assets/logement.json';
 import Erreur from './erreur404'
@@ -22,13 +25,21 @@ function Logement() {
     <div className="logement-detail">
       <Header />
       <Carrousel pictures={logement.pictures} />
-      <Title />
-      <p>{logement.description}</p>
-      <ul>
-        {logement.equipments.map((equipment, index) => (
-          <li key={index}>{equipment}</li>
-        ))}
-      </ul>
+      <div className='infos'>
+        <div className='infosLogement'>
+          <Title />
+          <Location />
+          <Tags />
+        </div>
+        <div className='infosHost'>
+          <Host />
+          <Rate rating={logement.rating} />
+        </div>
+      </div>
+      <div className='details'>
+        <Description />
+        <Equipements />
+      </div>
       <Footer />
     </div>
   );
@@ -57,7 +68,7 @@ function Carrousel({ pictures }) {
           <img src={Chevrongauche} alt='chevron gauche' />
         </div>
         <img src={pictures[currentIndex]} alt={`Image du logement ${currentIndex + 1}`} />
-        <p>{currentIndex + 1} / {pictures.length}</p>
+        <p className='dot'>{currentIndex + 1} / {pictures.length}</p>
         <div className="faRight" onClick={nextSlide}>
           <img src={Chevronright} alt='chevron droit' />
         </div>
@@ -73,6 +84,113 @@ function Title() {
   return (
   <h1>{logement.title}</h1>
   )
+}
+
+function Location() {
+  const { id } = useParams();
+  const logement = logementData.find(l => l.id === id);
+
+  return(
+    <p>{logement.location}</p>
+  )
+}
+
+function Host() {
+  const { id } = useParams();
+  const logement = logementData.find(l => l.id === id);
+
+  return(
+    <div className='host'>
+      <p>{logement.host.name}</p>
+      <img src={logement.host.picture} alt={logement.host.name} />
+    </div>
+  )
+}
+
+function Rate({ rating }) {
+  // Génération des étoiles pleines et vides sur la base de 5 étoiles
+  const totalStars = 5;
+  const fullStars = Array.from({ length: rating }, (_, index) => (
+    <FontAwesomeIcon key={`full-${index}`} icon={faStar} className='full-star' />
+  ));
+  const emptyStars = Array.from({ length: totalStars - rating }, (_, index) => (
+    <FontAwesomeIcon key={`empty-${index}`} icon={faStar} className='empty-star' />
+  ));
+
+  return (
+    <div className='rating'>
+      <div className='fullStar'>
+        {fullStars}
+      </div>
+      <div className='emptyStar'>
+        {emptyStars}
+      </div>
+    </div>
+  );
+}
+
+function Tags() {
+  const { id } = useParams();
+  const logement = logementData.find(l => l.id === id);
+
+  return(
+    <ul className='tags'>
+      {logement.tags.map((tags, index) => (
+        <li key={index}>{tags}</li>
+      ))}
+    </ul>
+  )
+}
+
+function Description() {
+  const { id } = useParams();
+  const logement = logementData.find(l => l.id === id);
+
+  const [collapse, setCollapse] = useState(false);
+
+  const handleCollapse = () => {
+      setCollapse(!collapse); 
+  };
+
+  return(
+    <div className='categoriesBox'>
+      <div className='categories'>
+          <h1>Description</h1>
+          <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
+      </div>
+      <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
+        <p>{logement.description}</p>
+      </div>
+    </div>
+    
+  )
+}
+
+function Equipements() {
+  const { id } = useParams();
+  const logement = logementData.find(l => l.id === id);
+
+  const [collapse, setCollapse] = useState(false);
+
+  const handleCollapse = () => {
+      setCollapse(!collapse); 
+  };
+
+  return (
+    <div className='categoriesBox'>
+      <div className='categories'>
+          <h1>Équipements</h1>
+          <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
+      </div>
+      <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
+        <ul>
+          {logement.equipments.map((equipement, index) => (
+            <li key={index}>{equipement}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }
 
 export default Logement;

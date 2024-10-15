@@ -3,58 +3,65 @@
     flex-direction: column;
     gap: 30px;
     margin: 0 208.5px 38px 208.5px;
+}
 
-    .categoriesBox {
-        display: flex;
-        flex-direction: column;
-    }
+.categoriesBox {
+    display: flex;
+    flex-direction: column;
+}
 
-    .categories {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 52px;
-        padding: 0 20px 0 15px;
-        background-color: #FF6060;
-    
-        h1 {
-            color: white;
-            font-size: 24px;
-        }
-        
-        .deroule {
-            color: white;
-            font-size: 24px;
-            transition: transform 0.4s ease;
-            cursor: pointer;
-        }
-    
-        .rotate {
-            transform: rotate(-180deg);  
-            transition: transform 0.4s ease 
-        }
-    
-        
+.categories {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    border-radius: 5px;
+    padding: 0 20px 0 15px;
+    background-color: #FF6060;
+
+    h1 {
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
     }
-    .collapseContent {
-        z-index: 0;
-        position: relative; bottom: 60px;
-        max-height: 0;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
-        transform: translateY(0);
-        overflow: hidden;
-        background-color: #F6F6F673;
+    
+    .deroule {
+        color: white;
+        font-size: 24px;
+        transition: transform 0.4s ease;
+        cursor: pointer;
     }
 
-    .slide {
-        max-height: 500px;
-        opacity: 1;
-        transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
-        transform: translateY(80%);
+    .rotate {
+        transform: rotate(-180deg);  
+        transition: transform 0.4s ease 
     }
+
+    
+}
+.collapseContent {
+    z-index: 0;
+    max-height: 0;
+    opacity: 0;
+    gap: 30px;
+    transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(-20%);
+    overflow: hidden;
+    background-color: #F6F6F673;
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.slide {
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(0%);
 }
 
 @keyframes opacity {
@@ -62,7 +69,13 @@
         opacity: 0;
     }
     25% {
+        opacity: 0.25;
+    }
+    50% {
         opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
     }
     100% {
         opacity: 1;

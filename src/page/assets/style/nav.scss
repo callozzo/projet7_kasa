@@ -1,16 +1,18 @@
 .banner {
+    position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 100px 43px 100px;
     border-radius: 25px;
     height: 223px;
-    background-image: linear-gradient(rgba(0,0,0,0.400),rgba(0,0,0,0.400)) , url(../images/ImageHome.png);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)) , url(../images/ImageHome.png);
     background-position: center;
-    background-size: cover;
-    filter: brightness(60%);
+    background-size: cover; 
+}
 
-    h1{
-        color: #FFFFFF;
-    }
+.banner h1 {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 48px;
 }

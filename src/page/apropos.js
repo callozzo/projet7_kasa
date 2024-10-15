@@ -131,4 +131,5 @@ function ChevronUp({ collapse, handleCollapse }) {
     );
 }
 
+export { ChevronUp };
 export default Apropos;
