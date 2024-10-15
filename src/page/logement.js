@@ -3,7 +3,7 @@ import { ChevronUp } from './apropos';
 import { useParams } from 'react-router-dom';
 import './assets/style/index.scss';
 import Chevrongauche from './assets/images/ChevronGauche.svg';
-import Chevronright from './assets/images/ChevronDroite.svg';
+import Chevrondroite from './assets/images/ChevronDroite.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar  } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
@@ -56,9 +56,9 @@ function Carrousel({ pictures }) {
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
   };
-
-  if (!pictures || pictures.length === 0) {
-    return <p>Aucune image disponible</p>;
+  
+  if (pictures.length === 1) {
+    
   }
 
   return (
@@ -70,7 +70,7 @@ function Carrousel({ pictures }) {
         <img src={pictures[currentIndex]} alt={`Image du logement ${currentIndex + 1}`} />
         <p className='dot'>{currentIndex + 1} / {pictures.length}</p>
         <div className="faRight" onClick={nextSlide}>
-          <img src={Chevronright} alt='chevron droit' />
+          <img src={Chevrondroite} alt='chevron droit' />
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@ function Title() {
   const logement = logementData.find(l => l.id === id);
 
   return (
-  <h1>{logement.title}</h1>
+  <h3>{logement.title}</h3>
   )
 }
 
@@ -155,7 +155,7 @@ function Description() {
   return(
     <div className='categoriesBox'>
       <div className='categories'>
-          <h1>Description</h1>
+          <h4>Description</h4>
           <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
       </div>
       <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
@@ -179,7 +179,7 @@ function Equipements() {
   return (
     <div className='categoriesBox'>
       <div className='categories'>
-          <h1>Équipements</h1>
+          <h4>Équipements</h4>
           <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
       </div>
       <div className={`collapseContent ${collapse ? 'slide' : ''}`}>

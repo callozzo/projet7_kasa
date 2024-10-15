@@ -1,6 +1,8 @@
 import logoRouge from './assets/images/.LOGO.svg';
 import logoBlanc from './assets/images/.LOGOBlanc.svg';
+import logoRougeMobile from './assets/images/.LOGOMobile.svg';
 import './assets/style/index.scss';
+import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import logement from './assets/logement.json';
 
@@ -19,11 +21,12 @@ function Header() {
   return (
     <div className='header'>
       <div>
-        <img src={logoRouge} alt='logo kasa' />
+        <img className='logoRouge' src={logoRouge} alt='logo kasa' />
+        <img className='logoRougeMobile' src={logoRougeMobile} alt='logo kasa pour mobile' />
       </div>
       <div className='link'>
-        <Link className='espacement' to="/">Accueil</Link>
-        <Link to="/Apropos">A Propos</Link>
+        <NavLink className='espacement' to="/" end>Accueil</NavLink>
+        <NavLink to="/Apropos">A Propos</NavLink>
       </div>
     </div>
   );
@@ -34,7 +37,7 @@ function Header() {
 function Banner() {
   return (
     <div className='banner'>
-      <h1>Chez vous, partout et ailleurs</h1>
+      <h2>Chez vous, partout et ailleurs</h2>
     </div>
   )
 }
@@ -67,8 +70,8 @@ function Card({ logement }) {
 function Footer() {
   return (
     <div className='footer'>
-      <img src={logoBlanc} alt='logo kasa noir'/>
-      <p>© 2020 Kasa. All rights reserved</p>
+      <img className='logoBlanc' src={logoBlanc} alt='logo kasa blanc'/>
+      <h4>© 2020 Kasa. All rights reserved</h4>
     </div>
   )
 }

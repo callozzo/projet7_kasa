@@ -43,7 +43,7 @@ function Fiabilité() {
     return (
         <div className='categoriesBox'>
             <div className='categories'>
-                <h1>Fiabilité</h1>
+                <h4>Fiabilité</h4>
                 <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
             </div>
             <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
@@ -65,7 +65,7 @@ function Respect() {
     return (
         <div className='categoriesBox'>
             <div className='categories'>
-                <h1>Respect</h1>
+                <h4>Respect</h4>
                 <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
             </div>
             <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
@@ -87,7 +87,7 @@ function Service() {
     return (
         <div className='categoriesBox'>
             <div className='categories'>
-                <h1>Service</h1>
+                <h4>Service</h4>
                 <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
             </div>
             <div className={`collapseContent ${collapse ? 'slide' : ''}`}>
@@ -109,7 +109,7 @@ function Sécurité() {
     return (
         <div className='categoriesBox'>
             <div className='categories'>
-                <h1>Sécurité</h1>
+                <h4>Sécurité</h4>
                 <ChevronUp collapse={collapse} handleCollapse={handleCollapse} />
             </div>
             <div className={`collapseContent ${collapse ? 'slide' : ''}`}>

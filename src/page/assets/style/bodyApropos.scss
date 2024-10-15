@@ -21,9 +21,8 @@
     padding: 0 20px 0 15px;
     background-color: #FF6060;
 
-    h1 {
+    h4 {
         color: white;
-        font-size: 24px;
         font-weight: 700;
     }
     
@@ -45,14 +44,13 @@
     z-index: 0;
     max-height: 0;
     opacity: 0;
-    gap: 30px;
+    padding: 0 20px 0 20px;
     transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
     transform: translateY(-20%);
     overflow: hidden;
     background-color: #F6F6F673;
 
     p {
-        font-size: 18px;
         font-weight: 400;
     }
 }

@@ -31,20 +31,7 @@
     
     p {
     color: white;
-    font-weight: 500;
-    font-size: 18px;
    }
-}
-
-h1 {
-    color: #FF6060;
-    font-size: 36px;
-    font-weight: 500;
-}
-
-p {
-    font-size: 18px;
-    font-weight: 500;
 }
 
 .host { 
@@ -59,8 +46,6 @@ p {
     }
 
     p {
-        font-size: 18px;
-        font-weight: 500;
         color: #FF6060;
     }
 }
@@ -102,9 +87,14 @@ p {
     }
 }
 
-li {
+ul {
+    padding: 0;
+    
+    li {
     list-style-type: none;
+    }
 }
+
 
 .infos {
     display: flex;
@@ -120,6 +110,5 @@ li {
 
     .categoriesBox {
         width: 582px;
-        
     }
 }

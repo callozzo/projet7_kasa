@@ -5,17 +5,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.link {
+
+p {
+  font-size: 18px;
   font-weight: 500;
-  font-size: 24px;
+}
+
+h1 {
+  font-size: 288px;
+  font-weight: 700;
 }
 
 h2 {
+  font-size: 48px;
   font-weight: 700;
-  font-size: 288px;
 }
 
 h3 {
-  font-weight: 500;
+  color: #FF6060;
   font-size: 36px;
+  font-weight: 500;
 }
+
+.link, h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
