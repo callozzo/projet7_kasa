@@ -1,6 +1,49 @@
 @media screen and (max-width: 768px) {
+    /****************       Général            *********************/
+
+    li {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    a {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    h1 {
+        font-size: 96px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    /**************       Page d'accueil        ***************/
+
     .header {
         margin: 20px 20px 27px 20px;
+    }
+
+    .espacement {
+        margin-right: 26px;
     }
 
     .logoRougeMobile {
@@ -13,6 +56,11 @@
 
     .banner {
         margin: 0 20px 0 20px;
+        height: 111px;
+
+        h2 {
+            margin: 31px 94px 32px 16px;
+        }
     }
 
     .body {
@@ -25,9 +73,45 @@
         background-color: white;
     }
 
-    .carrousel {
-        margin: 0 20px 0 20px;
+    .footer {
+        justify-content: center;
+        text-align: center;
+
+        h4 {
+            margin-top: 20px;
+            width: 133px;
+        }
     }
+
+    /***************    Page de logement    ******************/
+
+    .carrousel {
+        height: 255px;
+        margin: 0 20px 0 20px;
+        
+        .faLeft {
+            width: 12px;
+            height: 20px;
+            left: 26px;
+            font-size: 12px;
+        }
+
+        .faRight {
+            width: 12px;
+            height: 20px;
+            right: 26px;
+        }
+
+        .dot {
+            display: none;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    
 
     .infos {
         display: flex;
@@ -42,11 +126,63 @@
         justify-content: space-between;
     }
 
+    .host {
+        align-items: center;
+        margin: 0;
+
+        img {
+            margin-left: 10px;
+            height: 32px;
+            width: 32px;            
+        }
+
+        p {
+            width: 70px;
+        }
+    }
+
+    .rating {
+        justify-content: flex-start;
+        font-size: 18px;
+    }
+
     .details {
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin: 0 20px 27px 20px;
         padding: 0;
         gap: 20px;
+        
+        .categoriesBox {
+        width: 335px;
+        }
+    }
+
+    /***************    Page A propos   ****************/
+
+    .background {
+        margin: 0 20px 19px 20px;
+        height: 111px;
+    }
+
+    .bodyApropos {
+        margin: 0 20px 19px 20px;
+        gap: 20px
+    }
+
+    .categories {
+        height: 30px;
+        padding: 0 15px 0 10px;
+        
+        .deroule {
+            font-size: 16px;
+        }
+    }
+
+    /*****************     Page d'erreur     *******************/
+
+    .centrer {
+        text-align: center;
     }
 }

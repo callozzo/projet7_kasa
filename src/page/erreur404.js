@@ -1,4 +1,5 @@
-import { Header, Footer } from './home';
+import Header from './assets/components/header';
+import Footer from './assets/components/footer';
 import { Link } from 'react-router-dom';
 import './assets/style/index.scss';
 

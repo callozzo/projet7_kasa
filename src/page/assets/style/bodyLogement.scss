@@ -37,6 +37,8 @@
 .host { 
     display: flex;
     justify-content: space-around;
+    text-align: right;
+    align-items: center;
     margin: 24px 0 20px 0;
 
     img {
@@ -47,6 +49,7 @@
 
     p {
         color: #FF6060;
+        width: 120px;
     }
 }
 
