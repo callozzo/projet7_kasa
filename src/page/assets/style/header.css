@@ -12,7 +12,14 @@
   color: black;
   text-decoration: none;
 }
+.link .active {
+  text-decoration: underline;
+}
 
 .espacement {
   margin-right: 57px;
+}
+
+.logoRougeMobile {
+  display: none;
 }/*# sourceMappingURL=header.css.map */

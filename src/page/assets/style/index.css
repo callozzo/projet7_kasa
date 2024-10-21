@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -5,19 +6,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.link {
+p {
+  font-size: 18px;
   font-weight: 500;
-  font-size: 24px;
+}
+
+h1 {
+  font-size: 288px;
+  font-weight: 700;
 }
 
 h2 {
+  font-size: 48px;
   font-weight: 700;
-  font-size: 288px;
 }
 
 h3 {
-  font-weight: 500;
+  color: #FF6060;
   font-size: 36px;
+  font-weight: 500;
+}
+
+.link, h4 {
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .header {
@@ -34,13 +46,19 @@ h3 {
   color: black;
   text-decoration: none;
 }
+.link .active {
+  text-decoration: underline;
+}
 
 .espacement {
   margin-right: 57px;
 }
 
+.logoRougeMobile {
+  display: none;
+}
+
 .banner {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,10 +70,8 @@ h3 {
   background-size: cover;
 }
 
-.banner h1 {
+.banner h2 {
   color: #FFFFFF;
-  font-weight: 700;
-  font-size: 48px;
 }
 
 .background {
@@ -94,7 +110,6 @@ h3 {
   color: white;
   position: relative;
   right: 330px;
-  font-size: 18px;
   font-weight: 700;
 }
 .card img {
@@ -126,9 +141,8 @@ h3 {
   padding: 0 20px 0 15px;
   background-color: #FF6060;
 }
-.categories h1 {
+.categories h4 {
   color: white;
-  font-size: 24px;
   font-weight: 700;
 }
 .categories .deroule {
@@ -146,14 +160,13 @@ h3 {
   z-index: 0;
   max-height: 0;
   opacity: 0;
-  gap: 30px;
+  padding: 0 20px 0 20px;
   transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
   transform: translateY(-20%);
   overflow: hidden;
   background-color: rgba(246, 246, 246, 0.4509803922);
 }
 .collapseContent p {
-  font-size: 18px;
   font-weight: 400;
 }
 
@@ -189,10 +202,9 @@ h3 {
   height: 209px;
   background-color: black;
 }
-.footer p {
+.footer h4 {
   color: white;
-  font-weight: 500;
-  font-size: 24px;
+  margin: 0;
 }
 
 .centrer {
@@ -204,54 +216,19 @@ h3 {
 .redColor {
   color: #ff6060;
 }
-.redColor h2 {
+.redColor h1 {
   display: flex;
   justify-content: center;
-  font-size: 288px;
-  font-weight: 700;
   margin: 139px 0 139px 0;
 }
 .redColor h3 {
-  font-size: 36px;
-  font-weight: 500;
   margin-bottom: 139px;
 }
 
 .blackColor {
   color: black;
-  font-size: 18px;
   font-weight: 500;
   margin-bottom: 139px;
-}
-
-.carroussel {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 100px 0 100px;
-  height: 415px;
-  border-radius: 25px;
-}
-.carroussel svg {
-  width: 46px;
-  height: 78px;
-}
-
-.leftButton {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.rightButton {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.indicatorImage {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 .carrousel {
@@ -287,24 +264,13 @@ h3 {
 }
 .carrousel p {
   color: white;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-h1 {
-  color: #FF6060;
-  font-size: 36px;
-  font-weight: 500;
-}
-
-p {
-  font-size: 18px;
-  font-weight: 500;
 }
 
 .host {
   display: flex;
   justify-content: space-around;
+  text-align: right;
+  align-items: center;
   margin: 24px 0 20px 0;
 }
 .host img {
@@ -313,9 +279,8 @@ p {
   border-radius: 33px;
 }
 .host p {
-  font-size: 18px;
-  font-weight: 500;
   color: #FF6060;
+  width: 120px;
 }
 
 .rating {
@@ -352,7 +317,10 @@ p {
   margin-right: 10px;
 }
 
-li {
+ul {
+  padding: 0;
+}
+ul li {
   list-style-type: none;
 }
 
@@ -370,4 +338,164 @@ li {
 }
 .details .categoriesBox {
   width: 582px;
+}
+
+@media screen and (max-width: 768px) {
+  /****************       Général            *********************/
+  li {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  a {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  h1 {
+    font-size: 96px;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  h4 {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .collapseContent p {
+    font-size: 12px;
+  }
+  /**************       Page d'accueil        ***************/
+  .header {
+    margin: 20px 20px 27px 20px;
+  }
+  .espacement {
+    margin-right: 26px;
+  }
+  .logoRougeMobile {
+    display: flex;
+  }
+  .logoRouge {
+    display: none;
+  }
+  .banner {
+    margin: 0 20px 0 20px;
+    height: 111px;
+  }
+  .banner h2 {
+    margin: 31px 94px 32px 16px;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 25px 0 25px 0;
+    padding: 0 20px 0 20px;
+    gap: 20px;
+    background-color: white;
+  }
+  .body a {
+    width: 335px;
+    height: 225px;
+  }
+  .card {
+    width: 335px;
+    height: 225px;
+  }
+  .footer {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer h4 {
+    margin-top: 20px;
+    width: 133px;
+  }
+  /***************    Page de logement    ******************/
+  .carrousel {
+    height: 255px;
+    margin: 0 20px 0 20px;
+  }
+  .carrousel .faLeft {
+    width: 12px;
+    height: 20px;
+    left: 26px;
+    font-size: 12px;
+  }
+  .carrousel .faRight {
+    width: 12px;
+    height: 20px;
+    right: 26px;
+  }
+  .carrousel .dot {
+    display: none;
+  }
+  .carrousel img {
+    border-radius: 10px;
+  }
+  .infos {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 0 20px;
+  }
+  .infosHost {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .host {
+    align-items: center;
+    margin: 0;
+  }
+  .host img {
+    margin-left: 10px;
+    height: 32px;
+    width: 32px;
+  }
+  .host p {
+    width: 70px;
+  }
+  .rating {
+    justify-content: flex-start;
+    font-size: 18px;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px 27px 20px;
+    padding: 0;
+    gap: 20px;
+  }
+  .details .categoriesBox {
+    width: 335px;
+  }
+  /***************    Page A propos   ****************/
+  .background {
+    margin: 0 20px 19px 20px;
+    height: 111px;
+  }
+  .bodyApropos {
+    margin: 0 20px 19px 20px;
+    gap: 20px;
+  }
+  .categories {
+    height: 30px;
+    padding: 0 15px 0 10px;
+  }
+  .categories .deroule {
+    font-size: 16px;
+  }
+  /*****************     Page d'erreur     *******************/
+  .centrer {
+    text-align: center;
+  }
 }/*# sourceMappingURL=index.css.map */

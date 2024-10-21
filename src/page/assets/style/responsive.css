@@ -1,0 +1,160 @@
+@charset "UTF-8";
+@media screen and (max-width: 768px) {
+  /****************       Général            *********************/
+  li {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  a {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  h1 {
+    font-size: 96px;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  h4 {
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .collapseContent p {
+    font-size: 12px;
+  }
+  /**************       Page d'accueil        ***************/
+  .header {
+    margin: 20px 20px 27px 20px;
+  }
+  .espacement {
+    margin-right: 26px;
+  }
+  .logoRougeMobile {
+    display: flex;
+  }
+  .logoRouge {
+    display: none;
+  }
+  .banner {
+    margin: 0 20px 0 20px;
+    height: 111px;
+  }
+  .banner h2 {
+    margin: 31px 94px 32px 16px;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 25px 0 25px 0;
+    padding: 0 20px 0 20px;
+    gap: 20px;
+    background-color: white;
+  }
+  .body a {
+    width: 335px;
+    height: 225px;
+  }
+  .card {
+    width: 335px;
+    height: 225px;
+  }
+  .footer {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer h4 {
+    margin-top: 20px;
+    width: 133px;
+  }
+  /***************    Page de logement    ******************/
+  .carrousel {
+    height: 255px;
+    margin: 0 20px 0 20px;
+  }
+  .carrousel .faLeft {
+    width: 12px;
+    height: 20px;
+    left: 26px;
+    font-size: 12px;
+  }
+  .carrousel .faRight {
+    width: 12px;
+    height: 20px;
+    right: 26px;
+  }
+  .carrousel .dot {
+    display: none;
+  }
+  .carrousel img {
+    border-radius: 10px;
+  }
+  .infos {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px 0 20px;
+  }
+  .infosHost {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .host {
+    align-items: center;
+    margin: 0;
+  }
+  .host img {
+    margin-left: 10px;
+    height: 32px;
+    width: 32px;
+  }
+  .host p {
+    width: 70px;
+  }
+  .rating {
+    justify-content: flex-start;
+    font-size: 18px;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px 27px 20px;
+    padding: 0;
+    gap: 20px;
+  }
+  .details .categoriesBox {
+    width: 335px;
+  }
+  /***************    Page A propos   ****************/
+  .background {
+    margin: 0 20px 19px 20px;
+    height: 111px;
+  }
+  .bodyApropos {
+    margin: 0 20px 19px 20px;
+    gap: 20px;
+  }
+  .categories {
+    height: 30px;
+    padding: 0 15px 0 10px;
+  }
+  .categories .deroule {
+    font-size: 16px;
+  }
+  /*****************     Page d'erreur     *******************/
+  .centrer {
+    text-align: center;
+  }
+}/*# sourceMappingURL=responsive.css.map */

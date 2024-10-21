@@ -7,22 +7,17 @@
 .redColor {
   color: #ff6060;
 }
-.redColor h2 {
+.redColor h1 {
   display: flex;
   justify-content: center;
-  font-size: 288px;
-  font-weight: 700;
   margin: 139px 0 139px 0;
 }
 .redColor h3 {
-  font-size: 36px;
-  font-weight: 500;
   margin-bottom: 139px;
 }
 
 .blackColor {
   color: black;
-  font-size: 18px;
   font-weight: 500;
   margin-bottom: 139px;
 }/*# sourceMappingURL=erreur404.css.map */

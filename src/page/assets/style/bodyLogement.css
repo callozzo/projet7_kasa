@@ -31,24 +31,13 @@
 }
 .carrousel p {
   color: white;
-  font-weight: 500;
-  font-size: 18px;
-}
-
-h1 {
-  color: #FF6060;
-  font-size: 36px;
-  font-weight: 500;
-}
-
-p {
-  font-size: 18px;
-  font-weight: 500;
 }
 
 .host {
   display: flex;
   justify-content: space-around;
+  text-align: right;
+  align-items: center;
   margin: 24px 0 20px 0;
 }
 .host img {
@@ -57,9 +46,8 @@ p {
   border-radius: 33px;
 }
 .host p {
-  font-size: 18px;
-  font-weight: 500;
   color: #FF6060;
+  width: 120px;
 }
 
 .rating {
@@ -96,7 +84,10 @@ p {
   margin-right: 10px;
 }
 
-li {
+ul {
+  padding: 0;
+}
+ul li {
   list-style-type: none;
 }
 

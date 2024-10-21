@@ -21,9 +21,8 @@
   padding: 0 20px 0 15px;
   background-color: #FF6060;
 }
-.categories h1 {
+.categories h4 {
   color: white;
-  font-size: 24px;
   font-weight: 700;
 }
 .categories .deroule {
@@ -41,14 +40,13 @@
   z-index: 0;
   max-height: 0;
   opacity: 0;
-  gap: 30px;
+  padding: 0 20px 0 20px;
   transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
   transform: translateY(-20%);
   overflow: hidden;
   background-color: rgba(246, 246, 246, 0.4509803922);
 }
 .collapseContent p {
-  font-size: 18px;
   font-weight: 400;
 }
 

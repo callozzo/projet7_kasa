@@ -1,5 +1,4 @@
 .banner {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +10,6 @@
   background-size: cover;
 }
 
-.banner h1 {
+.banner h2 {
   color: #FFFFFF;
-  font-weight: 700;
-  font-size: 48px;
 }/*# sourceMappingURL=nav.css.map */
