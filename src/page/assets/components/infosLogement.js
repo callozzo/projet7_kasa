@@ -5,6 +5,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import CollapseBox from './collapse';
 import logementData from '../logement.json';
 
+// Fonction pour la mise en page de la description et infos logements et proprietaire
 function InfosLogements({ rating }) {
     const { id } = useParams();
     const logement = logementData.find(l => l.id === id);

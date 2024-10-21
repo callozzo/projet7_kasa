@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Chevrongauche from '../images/ChevronGauche.svg';
 import Chevrondroite from '../images/ChevronDroite.svg';
 
+// Fonction pour le carroussel pour la page de logement
 function Carrousel({ pictures }) {
     const [currentIndex, setCurrentIndex] = useState(0);
   

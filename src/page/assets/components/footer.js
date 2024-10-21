@@ -1,6 +1,7 @@
 import logoBlanc from '../images/.LOGOBlanc.svg';
 import '../style/index.scss';
 
+// Fonction pour le footer de toutes les pages 
 function Footer() {
     return (
       <div className='footer'>

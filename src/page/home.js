@@ -14,6 +14,7 @@ function Home() {
   )
 }
 
+// Fonciton pour la bannière de la page d'accueil
 function Banner() {
   return (
     <div className='banner'>

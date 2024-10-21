@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
 
+// Fonction de la box collapse et de son parent avec le chevron pourla page de logement et de a propos
 function CollapseBox({ title, children }) {
     const [collapse, setCollapse] = useState(false);
 
@@ -33,5 +34,4 @@ function ChevronUp({ collapse, handleCollapse }) {
     );
 }
 
-export { }
 export default CollapseBox;

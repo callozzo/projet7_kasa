@@ -3,6 +3,7 @@ import logoRougeMobile from '../images/.LOGOMobile.svg';
 import '../style/index.scss';
 import { NavLink } from 'react-router-dom';
 
+// Fonction pour le header avec un logo pour le format 1440px et pour le 768px pour toutes les pages
 function Header() {
     return (
       <div className='header'>

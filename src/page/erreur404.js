@@ -13,6 +13,7 @@ function Erreur() {
     )
 }
 
+// Fonction pour le body de la page erreur 404
 function PageNotFound() {
     return (
         <div className='centrer'>

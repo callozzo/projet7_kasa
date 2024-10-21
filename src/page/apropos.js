@@ -2,7 +2,7 @@ import Header from './assets/components/header';
 import Footer from './assets/components/footer';
 import CollapseBox from './assets/components/collapse';
 import './assets/style/index.scss';
-import React, { useState } from 'react';
+import React from 'react';
 
 function Apropos() {
     return (
@@ -15,6 +15,7 @@ function Apropos() {
     )
 }
 
+// Fonction de la bannière de la page a propos
 function BannerApropos() {
     return (
         <div className='background'>
@@ -22,6 +23,7 @@ function BannerApropos() {
     )
 }
 
+// Fonction des catégories pour la page a propos 
 function Categories() {
     return (
         <div className='bodyApropos'>

@@ -7,6 +7,8 @@ import Erreur from './erreur404'
 import Carrousel from './assets/components/carroussel';
 import InfosLogements from './assets/components/infosLogement';
 
+
+// Fonction pour toute la page de logement
 function Logement() {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
   const logement = logementData.find(l => l.id === id); // Trouve le logement correspondant à l'ID
